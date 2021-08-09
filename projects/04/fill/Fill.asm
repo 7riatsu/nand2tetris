@@ -12,3 +12,32 @@
 // the screen should remain fully clear as long as no key is pressed.
 
 // Put your code here.
+@SCREEN
+D = A
+@0
+M = D
+
+(LOOP)
+@KBD
+D = M
+
+@PSET
+D; JEQ
+
+@SCREEN
+M = 1
+
+@0
+A = M
+M = !M
+
+(PSET)
+@0
+M = M + 1
+
+@LOOP
+0; JMP
+
+(END)
+@END
+0; JMP
